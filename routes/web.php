@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        "name" => "Mochamad Rizky Pratama",
+        "email" => "mrizkyprtm28@gmail.com",
+        "image" => "profile.jpg"
+    ]);
 });
 
 Route::get('/blog', function () {
