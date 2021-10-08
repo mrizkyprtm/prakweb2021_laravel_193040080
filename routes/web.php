@@ -51,7 +51,29 @@ Route::get('/blog', function () {
 
 // halaman single post
 Route::get('posts/{slug}', function ($slug) {
+    $blog_posts = [
+        [
+            "title" => "Judul Post Pertama",
+            "slug" => "judul-post-pertama",
+            "author" => "Rizky",
+            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque autem consequatur inventore sed omnis dolores? Quos quisquam dolore, omnis, soluta sapiente pariatur aspernatur voluptatem tempore eligendi laudantium dolorum et consequatur harum ducimus corrupti. Iure maiores non deserunt unde pariatur. Obcaecati, incidunt distinctio eligendi omnis voluptates illum quod aliquid architecto necessitatibus quis adipisci ipsam rerum asperiores accusamus dolorem qui minima labore velit vero culpa nobis? Possimus cum commodi distinctio sint voluptatibus vero quos. Voluptate laudantium repellat dicta debitis? Maxime, aspernatur doloribus."
+        ],
+        [
+            "title" => "Judul Post Kedua",
+            "slug" => "judul-post-kedua",
+            "author" => "Pratama",
+            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque autem consequatur inventore sed omnis dolores? Quos quisquam dolore, omnis, soluta sapiente pariatur aspernatur voluptatem tempore eligendi laudantium dolorum et consequatur harum ducimus corrupti. Iure maiores non deserunt unde pariatur. Obcaecati, incidunt distinctio eligendi omnis voluptates illum quod aliquid architecto necessitatibus quis adipisci ipsam rerum asperiores accusamus dolorem qui minima labore velit vero culpa nobis? Possimus cum commodi distinctio sint voluptatibus vero quos. Voluptate laudantium repellat dicta debitis? Maxime, aspernatur doloribus."
+        ]
+    ];
+
+    $new_post = [];
+    foreach ($blog_posts as $post) {
+        if ($post["slug"] === $slug) {
+            $new_post = $post;
+        }
+    }
     return view('post', [
-        "title" => "Single Post"
+        "title" => "Single Post",
+        "post" => $new_post
     ]);
 });
