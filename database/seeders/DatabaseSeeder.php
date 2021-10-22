@@ -24,6 +24,12 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('12345')
         ]);
 
+        User::create([
+            'name' => 'Pratama',
+            'email' => 'mrpratama@gmail.com',
+            'password' => bcrypt('12345')
+        ]);
+
         Category::create([
             'name' => 'Web Programming',
             'slug' => 'web-programming'
@@ -67,7 +73,7 @@ class DatabaseSeeder extends Seeder
             'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor laudantium nesciunt architecto maxime error earum ipsa magnam.',
             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor laudantium nesciunt architecto maxime error earum ipsa magnam. Dicta odio minus quibusdam ad eius rerum quasi nesciunt optio quos mollitia magnam illo, harum vero, laborum quia quo autem, voluptatem atque. Cupiditate nesciunt illo dolores quaerat quisquam eos quia? Aliquid saepe mollitia consequuntur sapiente? Omnis non eveniet, vel maxime dolore ad quos hic voluptatem veniam error rem? Deserunt earum quaerat doloribus atque veritatis dolore? Officia commodi veniam quos minus amet culpa pariatur nihil ipsa enim totam excepturi dolor, odit mollitia modi eius eum deserunt adipisci dolores nam necessitatibus. Nulla, voluptatem ducimus!',
             'category_id' => 2,
-            'user_id' => 1
+            'user_id' => 2
         ]);
     }
 }
