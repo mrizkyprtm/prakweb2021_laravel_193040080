@@ -65,5 +65,9 @@
   @else
     <p class="text-center fs-4">No post found.</p>
   @endif
+  
+  <div class="d-flex justify-content-center">
+    {{ $posts->links() }}
+  </div>
 
 @endsection
